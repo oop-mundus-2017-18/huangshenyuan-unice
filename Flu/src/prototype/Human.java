@@ -1,6 +1,3 @@
-/**
- * 
- */
 package prototype;
 
 /**
@@ -9,9 +6,9 @@ package prototype;
  * @email shenyuan.huang@etu.unice.fr
  */
 public class Human implements Vivant {
-    SquareOfSandbox location;
-    private State state;
-    Human(SquareOfSandbox location){
+    Location location;
+    State state;
+    Human(Location location){
         state=State.HEALTHY;
         this.location=location;
     }
