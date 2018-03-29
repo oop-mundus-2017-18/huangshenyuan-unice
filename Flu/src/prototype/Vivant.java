@@ -11,16 +11,7 @@ public interface Vivant {
     /**
      * Every vivant can move
      */
-    void move();
+    public void move(int addX, int addY) ;
 
-    /**
-     * Every vivant may die
-     */
-    void die();
 
-    /**
-     * @param vivant
-     * Every vivant may contact with each other
-     */
-    void touch(Vivant vivant);
 }

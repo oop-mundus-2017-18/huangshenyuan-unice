@@ -16,26 +16,8 @@ public class Human implements Vivant {
      * @see prototype.Vivant#move()
      */
     @Override
-    public void move() {
+    public void move(int addX, int addY) {
         
     }
-
-    /* 
-     * @see prototype.Vivant#die()
-     */
-    @Override
-    public void die() {
-        
-    }
-
-    /* 
-     * @see prototype.Vivant#touch(prototype.Vivant)
-     */
-    @Override
-    public void touch(Vivant vivant) {
-        
-    }
-
-
 
 }

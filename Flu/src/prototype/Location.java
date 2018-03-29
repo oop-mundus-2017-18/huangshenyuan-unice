@@ -6,36 +6,47 @@ package prototype;
  * @email shenyuan.huang@etu.unice.fr
  */
 public class Location {
-    private final int x;
-    private final int y;
-    Location[] neighbor;
+    private boolean isVide;
+    private Vivant vivant;
 
-    Location(int x, int y) {
-        this.x = x;
-        this.y = y;
-
-        neighbor[0] = new Location(x, y + 1);
-        neighbor[1] = new Location(x - 1, y + 1);
-        neighbor[2] = new Location(x + 1, y + 1);
-        neighbor[3] = new Location(x, y - 1);
-        neighbor[4] = new Location(x + 1, y + 1);
-        neighbor[5] = new Location(x - 1, y + 1);
-        neighbor[6] = new Location(x + 1, y);
-        neighbor[7] = new Location(x - 1, y);
-
+    Location() {
+        isVide = true;
     }
 
-    int getX() {
-        return x;
+    private void setVivant(Vivant vivant) {
+        this.vivant = vivant;
+    }
+    
+    Vivant getVivant() {
+        return this.vivant;
+    }
+    
+    boolean addVivant(Vivant vivant) {
+        if(!isVide)
+            return false;
+        this.setVivant(vivant);
+        return true;
+            
     }
 
-    int getY() {
-        return y;
+    boolean isVide() {
+        return isVide;
     }
 
-    Location[] getNeighbor() {
-
-        return neighbor;
-
+    void exchangeVivant(Location location) {
+        Vivant vivantA = location.getVivant();
+        boolean stat = location.isVide;
+        location.isVide = isVide;
+        location.setVivant(this.vivant);
+        this.setVivant(vivantA);
+        isVide = stat;
     }
+    
+    @Override
+    public String toString() {
+        if(isVide) return "[ ]";
+        else return "["+vivant+"]";
+    }
+
+
 }
