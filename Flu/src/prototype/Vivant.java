@@ -6,12 +6,7 @@ package prototype;
  * @email shenyuan.huang@etu.unice.fr
  */
 public interface Vivant {
-
-    
-    /**
-     * Every vivant can move
-     */
-    public void move(int addX, int addY) ;
-
-
+//    void meet(Vivant vivant);
+//    State getState();
+//    void setState(State state);
 }

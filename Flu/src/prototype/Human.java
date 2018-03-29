@@ -12,12 +12,11 @@ public class Human implements Vivant {
         state=State.HEALTHY;
         this.location=location;
     }
-    /* 
-     * @see prototype.Vivant#move()
-     */
+
+    
     @Override
-    public void move(int addX, int addY) {
-        
+    public String toString() {
+        return "human";
     }
 
 }

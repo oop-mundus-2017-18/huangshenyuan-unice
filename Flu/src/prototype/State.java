@@ -6,5 +6,5 @@ package prototype;
  * @email shenyuan.huang@etu.unice.fr
  */
 public enum State {
-    SICK, CONTAGIOUS, HEALTHY, INFECTED, RECOVERING, DEAD;
+    HEALTHY, INFECTED, CONTAGIOUS_AND_SICK, CONTAGIOUS_NOT_SICK, RECOVERING, DEAD, RECOVERED;
 }
