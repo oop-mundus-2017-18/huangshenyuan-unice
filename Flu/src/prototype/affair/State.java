@@ -6,5 +6,16 @@ package prototype.affair;
  * @email shenyuan.huang@etu.unice.fr
  */
 public enum State {
-    CONTAGIOUS, HEALTHY, INFECTED, CONTAGIOUS_AND_SICK, CONTAGIOUS_NOT_SICK, RECOVERING, DEAD, RECOVERED;
+    CONTAGIOUS("_CON"), HEALTHY("_HEA"), INFECTED("_INF"), CONTAGIOUS_AND_SICK("_C&S"), CONTAGIOUS_NOT_SICK("_C!S"), RECOVERING("_RNG"), DEAD("_DEA"), RECOVERED("_RED");
+    
+    String name;
+    
+    State(String name){
+        this.name=name;
+    }
+    
+    @Override
+    public String toString() {
+        return this.name;
+    }
 }

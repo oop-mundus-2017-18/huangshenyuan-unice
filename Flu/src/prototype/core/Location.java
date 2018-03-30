@@ -10,11 +10,21 @@ import prototype.vivant.Vivant;
 public class Location {
     private boolean isVide;
     private Vivant vivant;
-
-    Location() {
+    int x;
+    int y;
+    
+    Location(int x, int y) {
         isVide = true;
+        this.x=x;
+        this.y=y;
     }
 
+    int getX() {
+        return x;
+    }
+    int getY() {
+        return y;
+    }
     private void setVivant(Vivant vivant) {
         this.vivant = vivant;
     }
@@ -50,7 +60,7 @@ public class Location {
     @Override
     public String toString() {
         if(isVide) return "[     ]";
-        else return "["+vivant+"]";
+        else return "["+vivant+vivant.getState()+"]";
     }
 
 

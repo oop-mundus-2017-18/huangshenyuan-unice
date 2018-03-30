@@ -16,7 +16,7 @@ public class Human implements Vivant {
     
     @Override
     public String toString() {
-        return "human";
+        return "H";
     }
 
     @Override

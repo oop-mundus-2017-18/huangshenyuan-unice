@@ -12,10 +12,8 @@ public class Main {
      */
     public static void main(String[] args) {
         Simulator test = new Simulator();
-        System.out.println(test);
-        System.out.println("\n\n\nAFTER MOVE:");
-        test.move();
-        System.out.println(test);
+        test.run(10);
+        System.out.println("ss");
 
     }
 

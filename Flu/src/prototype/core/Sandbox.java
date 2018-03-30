@@ -23,7 +23,7 @@ public class Sandbox {
     Sandbox() {
         for (int x = 0; x < SIZE; x++)
             for (int y = 0; y < SIZE; y++) {
-                locations[x][y] = new Location();
+                locations[x][y] = new Location(x,y);
                 videSpace.add(locations[x][y]);
             }
         ;
@@ -52,6 +52,33 @@ public class Sandbox {
      * @param y
      * @return the neighors it is a borderless map
      */
+    Location[] getNeighbor(Location location) {
+        int x = location.getX();
+        int y = location.getY();
+        int ym1 = y - 1;
+        int yp1 = y + 1;
+        int xm1 = x - 1;
+        int xp1 = x + 1;
+        if (y + 1 > SIZE - 1)
+            yp1 = 0;
+        if (y - 1 < 0)
+            ym1 = SIZE - 1;
+        if (x + 1 > SIZE - 1)
+            xp1 = 0;
+        if (x - 1 < 0)
+            xm1 = SIZE - 1;
+        Location[] neighbor = new Location[8];
+        neighbor[0] = locations[x][yp1];
+        neighbor[1] = locations[xm1][yp1];
+        neighbor[2] = locations[xp1][yp1];
+        neighbor[3] = locations[x][ym1];
+        neighbor[4] = locations[xp1][yp1];
+        neighbor[5] = locations[xm1][yp1];
+        neighbor[6] = locations[xp1][y];
+        neighbor[7] = locations[xm1][y];
+        return neighbor;
+    }
+    
     Location[] getNeighbor(int x, int y) {
         int ym1 = y - 1;
         int yp1 = y + 1;
@@ -78,6 +105,10 @@ public class Sandbox {
 
     }
 
+    Location getLocation(int x, int y) {
+        return locations[x][y];
+    }
+    
     @Override
     public String toString() {
         String table = "";

@@ -16,7 +16,7 @@ public class Chicken implements Animal {
 
     @Override
     public String toString() {
-        return "chick";
+        return "C";
     }
 
     @Override

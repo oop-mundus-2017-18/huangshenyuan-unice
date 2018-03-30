@@ -6,5 +6,7 @@ package prototype.affair;
  * @email shenyuan.huang@etu.unice.fr
  */
 public enum Event {
-    CONTACT, INCUBATION_TIME, CONTAGIOUS_TIME, RECOVERING_TIME;
+    CONTACT, INCUBATION_TIME, CONTAGIOUS_TIME, RECOVERING_TIME, NOTHING;
+    
+    
 }
