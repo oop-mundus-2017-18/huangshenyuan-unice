@@ -2,8 +2,9 @@ package prototype;
 
 /**
  * @author HUANG Shenyuan
- * @date 2018-02-23 08:45
+ * @date 2018-03-30 01:17
  * @email shenyuan.huang@etu.unice.fr
  */
-public interface Virus {
+public interface Animal extends Vivant {
+
 }

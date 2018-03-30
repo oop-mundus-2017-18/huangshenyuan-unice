@@ -33,6 +33,9 @@ public class Location {
         return isVide;
     }
 
+    void setOccupy() {
+        isVide = false;
+    }
     void exchangeVivant(Location location) {
         Vivant vivantA = location.getVivant();
         boolean stat = location.isVide;
@@ -44,7 +47,7 @@ public class Location {
     
     @Override
     public String toString() {
-        if(isVide) return "[ ]";
+        if(isVide) return "[     ]";
         else return "["+vivant+"]";
     }
 

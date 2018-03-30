@@ -6,7 +6,6 @@ package prototype;
  * @email shenyuan.huang@etu.unice.fr
  */
 public interface Vivant {
-//    void meet(Vivant vivant);
-//    State getState();
-//    void setState(State state);
+    State getState();
+    void setState(State state);
 }

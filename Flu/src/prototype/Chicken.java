@@ -1,31 +1,32 @@
+/**
+ * 
+ */
 package prototype;
 
 /**
  * @author HUANG Shenyuan
- * @date 2018-02-23 09:06
+ * @date 2018-03-30 01:20
  * @email shenyuan.huang@etu.unice.fr
  */
-public class Human implements Vivant {
+public class Chicken implements Animal {
     State state;
-    Human(){
-        state=State.HEALTHY;
+
+    Chicken() {
+        state = State.HEALTHY;
     }
 
-    
     @Override
     public String toString() {
-        return "human";
+        return "chick";
     }
 
     @Override
     public State getState() {
         return state;
     }
-
-
+    
     @Override
     public void setState(State state) {
         this.state=state;       
     }
-
 }
