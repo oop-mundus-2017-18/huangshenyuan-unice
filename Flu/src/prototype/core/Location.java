@@ -10,35 +10,37 @@ import prototype.vivant.Vivant;
 public class Location {
     private boolean isVide;
     private Vivant vivant;
-    int x;
-    int y;
-    
+    private int x;
+    private int y;
+
     Location(int x, int y) {
         isVide = true;
-        this.x=x;
-        this.y=y;
+        this.x = x;
+        this.y = y;
     }
 
     int getX() {
         return x;
     }
+
     int getY() {
         return y;
     }
+
     private void setVivant(Vivant vivant) {
         this.vivant = vivant;
     }
-    
+
     Vivant getVivant() {
         return this.vivant;
     }
-    
+
     boolean addVivant(Vivant vivant) {
-        if(!isVide)
+        if (!isVide)
             return false;
         this.setVivant(vivant);
         return true;
-            
+
     }
 
     boolean isVide() {
@@ -48,6 +50,7 @@ public class Location {
     void setOccupy() {
         isVide = false;
     }
+
     void exchangeVivant(Location location) {
         Vivant vivantA = location.getVivant();
         boolean stat = location.isVide;
@@ -56,12 +59,10 @@ public class Location {
         this.setVivant(vivantA);
         isVide = stat;
     }
-    
+
     @Override
     public String toString() {
-        if(isVide) return "[     ]";
-        else return "["+vivant+vivant.getState()+"]";
+        return isVide ? "[     ]" : "[" + vivant + vivant.getState() + "]";
     }
-
 
 }

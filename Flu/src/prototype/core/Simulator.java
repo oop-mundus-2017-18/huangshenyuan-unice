@@ -2,6 +2,7 @@ package prototype.core;
 
 import static prototype.affair.Event.*;
 import static prototype.affair.State.*;
+import static prototype.core.Sandbox.SIZE;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -13,9 +14,6 @@ import prototype.vivant.Chicken;
 import prototype.vivant.Human;
 import prototype.vivant.Pig;
 import prototype.vivant.Vivant;
-import static prototype.core.Sandbox.SIZE;
-import static prototype.affair.Event.*;
-import static prototype.affair.State.*;
 
 /**
  * @author HUANG Shenyuan
@@ -33,7 +31,7 @@ public class Simulator {
     private static final int NOMBER_CHICKEN = 10;
     private static final int NOMBER_PIG = 6;
     private Sandbox sandbox = new Sandbox();
-    Map<State, Map<Event, Supplier<State>>> dict = new HashMap<>();
+    private final Map<State, Map<Event, Supplier<State>>> dict = new HashMap<>();
 
     Simulator() {
         buildDict();

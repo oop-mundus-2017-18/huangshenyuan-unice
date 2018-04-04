@@ -14,8 +14,8 @@ import prototype.vivant.Vivant;
 public class Sandbox {
     public static final int SIZE = 10;
     final Location[][] locations = new Location[SIZE][SIZE];
-    List<Location> videSpace = new ArrayList<>();
-    Random rand = new Random();
+    private List<Location> videSpace = new ArrayList<>();
+    private Random rand = new Random();
 
     /**
      * Build the sandbox which size is SIZEOFBOX^2
